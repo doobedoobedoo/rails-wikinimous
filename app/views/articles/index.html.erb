@@ -1,0 +1,11 @@
+<h1>
+  <%= link_to "Create new article", new_article_path %>
+</h1>
+
+<% @article.each do |el| %>
+  <h1>
+    <%= link_to el[:title], article_path(el) %>
+  </h1>
+  <%= el[:content] %>
+  <%   %>
+<% end %>

@@ -1,0 +1,16 @@
+  <h1>
+    <%= @article[:title] %>
+    <small>
+      <%= link_to "edit", edit_article_path(@article[:id]) %>
+    </small>
+    <small>
+      <%= link_to "delete", article_path(@article[:id]),
+      method: :delete,
+      data: { confirm: "C'est votre ultime bafouille?"} %>
+    </small>
+  </h1>
+  <%= @article[:content] %>
+
+  <p>
+    <%= link_to "back", articles_path(@article[:id]) %>
+  </p>
